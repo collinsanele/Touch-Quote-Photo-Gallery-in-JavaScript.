@@ -1,0 +1,70 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href='css/bootstrap.min.css' rel='stylesheet'>
+<title>Photo Gallery</title>
+<style>
+ body {
+  background-color:black;
+  }
+ #content {
+   width:320px;
+   margin: 0 auto;
+   max-height:250px;
+   } 
+   
+ #main-pic {
+   height:320px;
+   width: 320px;
+   padding-bottom:7px;
+   }
+   
+ #big-pic {
+   height:320px;
+   width: 320px;
+   padding-bottom:7px;
+   }
+ 
+ #grid-pic {
+   display:grid
+   grid-template-rows:auto auto auto;
+   min-height:120px;
+   max-width:960px;
+   
+   }
+.small-pic {
+  width:32.2%;
+  height:33.3%;
+  }
+  
+  
+ </style> 
+</head>
+<body>
+<div id='content'>
+ <div id='main-pic'>
+ <img id='big-pic' src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTaD4FG79oWnt2ChQeCTD_cWTDW1OkZBSA0n7fV33VdXQIG2n77'>
+ </div>
+ <div id='grid-pic'>
+ <img class='small-pic' src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQRqRkjoeV1PS19I46GzaYvvTv-vhIaEx_qpLgEQZbBSWzEDqSw'>
+ <img class='small-pic' src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRlTq1TLRWgahTXEU-nNujrFeOHmEViv-9YUoo5CT_E77NBI7v9'>
+ <img class='small-pic' src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTcug0IBeWyQhoqu1pD4HVjQZFbfdCYKOF46i9eUoBTn_X5Z2Rf'>
+ <img class='small-pic' src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRdbg7HZkK7oseRBHHm4X0qbKkBxyG4KuSpN0-JocG7YaPSjkno'>
+ <img class='small-pic' src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTaD4FG79oWnt2ChQeCTD_cWTDW1OkZBSA0n7fV33VdXQIG2n77'>
+ <img class='small-pic' src='http://www.lovethispic.com/uploaded_images/36378-What-Is-Life.jpg'>
+ </div>
+ </div>
+</body>
+<script src='js/bootstrap.min.js'>
+</script>
+<script>
+var bPic = document.querySelector('#big-pic');
+ var sPic = document.querySelectorAll('.small-pic');
+ for (var i=0; i<sPic.length; i++){
+   sPic[i].addEventListener('click', function(){
+     bPic.src = this.src})}
+     
+     
+
+</script>
+</html>
